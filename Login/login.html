@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LoginPage</title>
+    <link rel="stylesheet" href="login.css" />
+</head>
+
+<body>
+
+
+
+
+    <div id="mainCoantiner">
+
+        <!--dust particel-->
+        <div>
+            <div class="starsec"></div>
+            <div class="starthird"></div>
+            <div class="starfourth"></div>
+            <div class="starfifth"></div>
+        </div>
+        <!--Dust particle end--->
+
+        <div class="container text-center text-dark mt-5">
+            <div class="row">
+                <div class="col-lg-4 d-block mx-auto mt-5">
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 col-md-12">
+                            <div class="hero">
+                                <div class="form-box">
+                                    <div class="div button-box">
+                                        <div id="btn"></div>
+                                        <button type="button" class="toggle-btn" onclick="admin()">Admin</button>
+                                        <button type="button" class="toggle-btn" onclick="teacher()">Teacher</button>
+                                    </div>
+
+
+                                    <form id="admin" class="input-group">
+                                        <h1>Login As Admin</h1>
+                                        <input type="text" class="input-field" placeholder="Username" required>
+                                        <input type="text" class="input-field" placeholder="Password" required>
+                                        <button class="submit-btn" type="submit">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            Log In</button>
+                                    </form>
+
+                                    <form id="teacher" class="input-group">
+                                        <h1>Login As Teacher</h1>
+                                        <input type="text" class="input-field" placeholder="Username" required>
+                                        <input type="text" class="input-field" placeholder="Password" required>
+                                        <button class="submit-btn" type="submit">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            Log In</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="login.js" type="text/javascript"></script>
+</body>
+
+</html>

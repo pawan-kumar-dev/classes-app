@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Student Detail</title>
+    <link rel="stylesheet" href="createStudent.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="mainName">S.N. Classes</div>
+            <div class="statement">Your Way to manage the Classes....</div>
+        </nav>
+        <main>
+            <h2 class="logintext">Add New Student Details.</h2>
+            <form class="form formData">
+                <div class="names ">
+                    <input type="text" name="fname" pattern="[A-Za-z]{1,30}" title="Please enter valid name eg(Rahul)"
+                        placeholder="Enter Student First Name" class="inputs" required />
+                    <input type="text" name="lname" pattern="[A-Za-z]{1,30}" title="Please enter valid name eg(Singh)"
+                        placeholder="Enter Student Last Name" class="inputs" required />
+                </div>
+                <div class="ids">
+                    <input type="number" min="1" name="stu_id" pattern="[0-9]+"
+                        title="Please enter valid id(only numbers)" placeholder="Enter Student Id" class="inputs"
+                        required />
+                    <div>
+                        <label>Gender : </label>
+                        <div class="toggle-div">
+                            <input type="radio" id="male" name="toggle" value="male" checked />
+                            <label for="male">Male</label>
+                            <input type="radio" id="female" name="toggle" value="female" />
+                            <label for="female">Female</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="academics">
+                    <select name="std" class="inputs">
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="Pharmacy">Pharmacy</option>
+                    </select>
+                </div>
+                <div class="feesdetails">
+                    <input type="number" name="feemon" pattern="[0-9]+" title="Enter a valid Fees details"
+                        placeholder="Enter Fees Details" class="inputs" required />
+                    <input type="number" name="actfee" pattern="[0-9]+" title="Enter a valid Fees details"
+                        placeholder="Enter Actual Fees Details" class="inputs" required />
+                </div>
+                <div class="extraDetails">
+                    <div>
+                        <label>Date of Joining:</label>
+                        <input type="date" name="doj" placeholder="Enter Date of Joining" class="inputs" required />
+                    </div>
+                    <input type="number" name="downp" pattern="[0-9]+" title="Please enter valid details"
+                        placeholder="Enter Down payment details" class="inputs" required />
+                </div>
+                <div class="contacts">
+                    <input type="number" name="c_no" placeholder="Enter Contact number" pattern="[9876][0-9]{9}+"
+                        title="Please enter valid contact details" class="inputs" required />
+                    <input type="email" name="gmail" placeholder="Enter Student Email ID" class="inputs" required
+                        autocomplete="off" />
+                </div>
+                <div class="addresses">
+                    <textarea rows="1" class="inputs textarea" placeholder="Enter your Address" required></textarea>
+                </div>
+                <button class="loginbtn">Add Details</button><br>
+                <input class="loginbtn reset" type="reset" value="Reset" />
+            </form>
+        </main>
+    </header>
+</body>
+
+</html>

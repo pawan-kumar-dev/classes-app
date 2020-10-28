@@ -1,0 +1,258 @@
+ body {
+     margin: 0;
+     padding: 0;
+     background-color: white;
+     width: 100%;
+ }
+
+ nav {
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 1rem;
+     box-shadow: 2px 2px 2px rgb(228, 181, 93);
+     background-color: rgb(240, 238, 231);
+     box-sizing: border-box;
+ }
+
+ header {
+     width: 100%;
+ }
+
+ nav>a {
+     text-decoration: none;
+ }
+
+ .mainName {
+     font-size: 1.3rem;
+     font-weight: 900;
+     letter-spacing: 2px;
+     margin-right: 20px;
+     padding: 0.5rem;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     background-color: rgb(169, 90, 243);
+     border-radius: 10px;
+     transform: rotate(-8deg);
+     transition: all 0.2s ease-in-out;
+     cursor: pointer;
+     color: rgb(231, 213, 213);
+ }
+
+ .mainName:hover {
+     transform: rotate(0deg);
+ }
+
+ .statement {
+     font-weight: 900;
+     font-size: 1.2rem;
+     letter-spacing: 2px;
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ }
+
+ main {
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+     justify-content: center;
+     box-sizing: border-box;
+ }
+
+ .logintext {
+     font-size: 1.6rem;
+     margin: 0;
+     font-weight: 900;
+     letter-spacing: 0.2rem;
+     word-spacing: 0.2rem;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     color: rgb(34, 25, 12);
+     text-shadow: 1px 1px 3px rgb(77, 71, 71);
+     padding: 0.3rem;
+ }
+
+ .form {
+     padding: 1rem;
+     border-radius: 1rem;
+     margin: 0 2rem;
+     box-shadow: 3px 3px 6px rgb(34, 33, 33);
+     background-color: rgb(255, 255, 255);
+ }
+
+ .inputs {
+     margin: 1rem 0;
+     padding: 0.5rem;
+     letter-spacing: 2px;
+     border: 1px solid black;
+     outline: none;
+     border-radius: 0.3rem;
+     font-size: 0.8rem;
+     background-color: rgb(240, 235, 235);
+ }
+
+ .loginbtn,
+ .reset {
+     padding: 0.5rem 2rem;
+     background-color: rgb(240, 176, 58);
+     border: 0;
+     font-weight: 600;
+     outline: none;
+     color: whitesmoke;
+     border-radius: 10px;
+     margin: 0 0 1rem 0;
+     font-size: 1rem;
+     transition: all 1s;
+     cursor: pointer;
+ }
+
+ .reset {
+     background-color: rgb(105, 103, 100);
+ }
+
+ .names,
+ .ids,
+ .contacts,
+ .feesdetails,
+ .extraDetails {
+     display: grid;
+     grid-template-columns: 48% 48%;
+     align-items: center;
+     justify-content: space-between;
+ }
+
+
+ .ids>div {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .ids>div>label {
+     margin-right: 10px;
+ }
+
+ .extraDetails>div {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .extraDetails>div>label {
+     margin-right: 10px;
+ }
+
+ .extraDetails>div>input {
+     flex: 1;
+ }
+
+ input::placeholder {
+     font-weight: 700;
+ }
+
+ .toggle-div {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     overflow: hidden;
+     flex: 1;
+ }
+
+ .toggle-div input {
+     position: absolute;
+     height: 1px;
+     width: 1px;
+     border: none;
+     overflow: hidden;
+ }
+
+ .toggle-div label {
+     background-color: rgb(226, 209, 209);
+     color: black;
+     font-size: 1.1rem;
+     font-family: 'Trebuchet MS',
+         'Lucida Sans Unicode',
+         'Lucida Grande',
+         'Lucida Sans',
+         Arial,
+         sans-serif;
+     font-weight: 900;
+     text-align: center;
+     padding: 5px 10px;
+     transition: all 0.2s ease-in-out;
+     width: 100%;
+ }
+
+ .toggle-div label:hover {
+     cursor: pointer;
+ }
+
+ .toggle-div input:checked+label {
+     background-color: rgb(228, 181, 93);
+     color: cornsilk;
+ }
+
+ .toggle-div label:first-of-type {
+     border-radius: 6px 0 0 6px;
+ }
+
+ .toggle-div label:last-of-type {
+     border-radius: 0 6px 6px 0;
+ }
+
+ .academics,
+ .addresses {
+     display: grid;
+     grid-template-columns: 100%;
+ }
+
+ .addresses>textarea {
+     resize: none;
+     font-size: 1rem;
+ }
+
+ .btns {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-self: center;
+     width: 30%;
+ }
+
+ @media(max-width:720px) {
+     .mainName {
+         font-size: 1rem;
+         font-weight: 600;
+         letter-spacing: 1px;
+         padding: 0.3rem;
+         transform: rotate(-5deg);
+     }
+
+     .names,
+     .contacts,
+     .feesdetails,
+     .addresses {
+         grid-template-columns: 100%;
+     }
+
+     .names input:first-of-type,
+     .contacts input:first-of-type,
+     .credentials input:first-of-type,
+     .academics .inputs:first-of-type,
+     .feesdetails input:first-of-type {
+         margin-right: 0;
+     }
+ }
+
+ @media(max-width:550px) {
+     .ids {
+         grid-template-columns: 100%;
+     }
+
+     .extraDetails {
+         grid-template-columns: 100%;
+     }
+
+     .extraDetails>div input {
+         flex: 1;
+         margin-left: 10px;
+     }
+ }
